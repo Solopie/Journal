@@ -50,10 +50,11 @@ def displayLogContents(contents):
         firstSubject = True
         for subject,value in task.items():
             if firstSubject:
-                print("[" + str(index) + "] " + subject + ":" + value)
+                indexString = str(index)
+                print(f"[{indexString}] {subject}:{value}")
                 firstSubject = False
             else:
-                print("    " + subject + ":" + value)
+                print(f"    {subject}:{value}")
         index += 1
         print()
 
@@ -61,14 +62,9 @@ def displayLogContents(contents):
 Function: Give task in viewable format from JSON
 Expected: Print out specified task.
 '''
-def viewTask(filename, taskID):
-    contents = loadLog(filename)
-    task = contents[taskID]
-    viewTask(task)
-
 def viewTask(task):
     for subject,value in task.items():
-        print(subject + ":" + value)
+        print(f"{subject}:{value}")
     print()
 
 ''' ******************** EDITING LOG ******************** '''
@@ -102,7 +98,7 @@ def modifySubjects(taskDict, title):
                 # Conditions met to finish the task
                 addingSubjects = False
         else:
-            value = input("Value for " + subject + " (Leave empty to delete subject): ")
+            value = input(f"Value for {subject} (Leave empty to delete subject): ")
             if not value:
                 if subject in taskDict:
                     del taskDict[subject]
