@@ -2,6 +2,8 @@
 
 - Current Version: v0.0001 (literally just started)
 - Only tested on python 3.7.0 with bash.
+- P.S. This was meant to be a quick thing but someone wanted to look at it (Jordan) so might as well 
+- Feel free to tell me what I did bad at :)
 
 ## What is this?
 
@@ -20,4 +22,5 @@ Just a python script lul (no installation required :O)
 - GUI :O
 - Statistic tracking
     - Graphs
+   
 
